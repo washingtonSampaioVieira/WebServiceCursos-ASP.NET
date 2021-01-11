@@ -10,6 +10,7 @@ namespace WebServiceCursos.Models
     {
         public CursoContext() : base("CursoLocal")
         {
+            Database.Log = d => System.Diagnostics.Debug.WriteLine(d);
         }
 
         public DbSet<Curso> Cursos { get; set; }
